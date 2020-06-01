@@ -67,3 +67,7 @@ Al implementar el muestreo de Thompson, también implementaremos el algoritmo de
 
 Rendimiento Rel. = (Recompensa M. de Thomson) - (Recompensa Selección Aleatoria) / (Recompensa Selección Aleatoria) * 100
 
+Tras aplicar el algoritmo implementado en python este sería el resultado
+
+![Resultado](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/Resultado.png)
+
