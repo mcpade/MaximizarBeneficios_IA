@@ -33,20 +33,20 @@ es la mejor estrategia en el menor tiempo posible.
 
 #### Simulación
 
-Para simular este Caso Práctico, asumiremos que estas estrategias tienen las siguientes tasas de conversión. En una situación de la vida real no tendríamos idea de cuáles serían estas tasas de conversión. Solo las conocemos aquí para fines de simulación, solo para que podamos verificar al final que nuestra IA logra descubrir la mejor estrategia, que según la tabla siguiente es la estrategia número 7 (la que tiene la tasa de conversión más alta).
+Para simular este Caso Práctico, asumiremos que estas estrategias tienen las siguientes tasas de conversión. En una situación de la vida real no tendríamos idea de cuáles serían estas tasas de conversión. Solo las conocemos aquí para fines de simulación, solo para que podamos verificar al final que nuestra IA logra descubrir la mejor estrategia, que según la tabla siguiente es la estrategia número 6 (la que tiene la tasa de conversión más alta).
 
   
 Strategy | Conversion Rate
 ---------| ----------------
-1        | 0.05
-2        | 0.13
-3        | 0.09
-4        | 0.16
-5        | 0.11
-6        | 0.04
-7        | 0.20
-8        | 0.08
-9        | 0.01
+0        | 0.05
+1        | 0.13
+2        | 0.09
+3        | 0.16
+4        | 0.11
+5        | 0.04
+6        | 0.20
+7        | 0.08
+8        | 0.01
 
 ### Definición del entorno
 
@@ -67,12 +67,28 @@ Al implementar el muestreo de Thompson, también implementaremos el algoritmo de
 
 Rendimiento Rel. = (Recompensa M. de Thomson) - (Recompensa Selección Aleatoria) / (Recompensa Selección Aleatoria) * 100
 
-Tras aplicar el algoritmo implementado en python, este sería el resultado en el que se puede ver que se consigue superar con el Muestreo de Thomson en un 110% a la selección aleatoria
+Tras aplicar el algoritmo implementado en python, este sería el resultado en el que se puede ver que se consigue con el Muestreo de Thomson más que duplicar la selección aleatoria. 
 
 ![Resultado](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/Resultado.png)
 
-También representaremos el histograma de los anuncios seleccionados, solo para verificar que la estrategia con la tasa de conversión más alta (Estrategia 7) ha sido en efecto la más seleccionada.
+También representaremos el histograma de los anuncios seleccionados, solo para verificar que la estrategia con la tasa de conversión más alta (Estrategia 6) ha sido en efecto la más seleccionada. El muestreo de Thompson ha sido capaz de identificarlo rápidamente
 
 ![Histograma](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/HistogramaEstrategias.png)
+
+### Curva de arrepentimiento
+
+La curva de arrepentimiento de un modelo (con estrategia aleatoria o con el muestreo de Sampling) es la representación gráfica de la diferencia entre la mejor estrategia y el modelo desplegado, con respecto a las rondas.
+
+La mejor estrategia se calcula simplemente obteniendo, en cada ronda, el máximo de las recompensas acumuladas sobre todas las diferentes estrategias. 
+
+**Curva de arrepentimiento de la estrategia aleatoria:**
+
+![ArrepentimientoAle](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/Regret RS.png)
+
+No observamos absolutamente ninguna convergencia de la estrategia aleatoria hacia la mejor estrategia.
+
+**Curva de arrepentimiento del Muestreo de Thompson:**
+
+![ArrepentimientoAle](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/Regret TS.png)
 
 
