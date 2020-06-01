@@ -73,3 +73,6 @@ Tras aplicar el algoritmo implementado en python, este sería el resultado en el
 
 También representaremos el histograma de los anuncios seleccionados, solo para verificar que la estrategia con la tasa de conversión más alta (Estrategia 7) ha sido en efecto la más seleccionada.
 
+![Histograma](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/HistogramaEstrategias.png)
+
+
