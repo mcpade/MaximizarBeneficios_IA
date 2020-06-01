@@ -35,6 +35,7 @@ es la mejor estrategia en el menor tiempo posible.
 
 Para simular este Caso Práctico, asumiremos que estas estrategias tienen las siguientes tasas de conversión. En una situación de la vida real no tendríamos idea de cuáles serían estas tasas de conversión. Solo las conocemos aquí para fines de simulación, solo para que podamos verificar al final que nuestra IA logra descubrir la mejor estrategia, que según la tabla siguiente es la estrategia número 7 (la que tiene la tasa de conversión más alta).
 
+<center>
 Strategy | Conversion Rate
 ---------| ----------------
 1        | 0.05
@@ -46,7 +47,7 @@ Strategy | Conversion Rate
 7        | 0.20
 8        | 0.08
 9        | 0.01
-
+</center>
 
 
 
