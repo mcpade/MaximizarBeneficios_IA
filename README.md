@@ -67,7 +67,9 @@ Al implementar el muestreo de Thompson, también implementaremos el algoritmo de
 
 Rendimiento Rel. = (Recompensa M. de Thomson) - (Recompensa Selección Aleatoria) / (Recompensa Selección Aleatoria) * 100
 
-Tras aplicar el algoritmo implementado en python este sería el resultado
+Tras aplicar el algoritmo implementado en python, este sería el resultado en el que se puede ver que se consigue superar con el Muestreo de Thomson en un 110% a la selección aleatoria
 
 ![Resultado](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/Resultado.png)
+
+También representaremos el histograma de los anuncios seleccionados, solo para verificar que la estrategia con la tasa de conversión más alta (Estrategia 7) ha sido en efecto la más seleccionada.
 
