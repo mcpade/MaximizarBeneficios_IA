@@ -83,12 +83,12 @@ La mejor estrategia se calcula simplemente obteniendo, en cada ronda, el máximo
 
 **Curva de arrepentimiento de la estrategia aleatoria:**
 
-![ArrepentimientoAle](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/Regret RS.png)
+![ArrepentimientoAle](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/RegretRS.png)
 
 No observamos absolutamente ninguna convergencia de la estrategia aleatoria hacia la mejor estrategia.
 
 **Curva de arrepentimiento del Muestreo de Thompson:**
 
-![ArrepentimientoAle](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/Regret TS.png)
+![ArrepentimientoAle](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/RegretTS.png)
 
-
+El muestreo de Thompson está convergiendo muy bien hacia la mejor estrategia.
