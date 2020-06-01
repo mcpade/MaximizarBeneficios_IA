@@ -48,7 +48,13 @@ Strategy | Conversion Rate
 8        | 0.08
 9        | 0.01
 
+#### Definición del entorno
 
+Tenemos que definir las recompensas para construir nuestra matriz de recompensas, donde cada fila corresponde a un usuario que está implementando una estrategia, y cada columna corresponde a una de las 9 estrategias. Por lo tanto, dado que realmente ejecutaremos este experimento de aprendizaje en línea en 10.000 clientes, esta matriz de recompensas tendrá 10.000 filas y 9 columnas. Luego, cada celda obtendrá un 0 si el cliente no se suscribe al plan premium después de ser abordado por la estrategia seleccionada, y un 1 si el cliente se suscribe después de ser abordado por la estrategia seleccionada. Y los valores en la celda son exactamente, las recompensas.
+
+La matriz de recompensas solo está aquí para la simulación, y en la vida real no tendríamos una matriz de recompensas. Simplemente simularemos 10.000 clientes siendo abordados sucesivamente por una de las 9 estrategias, y gracias a la matriz de recompensas simularemos la decisión del cliente de suscribirse sí o no al plan premium. Si la celda correspondiente a un cliente específico y una estrategia seleccionada específica tiene un 1, eso simulará una conversión por parte del cliente al plan premium, y si la celda tiene un 0, simulará un rechazo. 
+
+El muestreo de Thompson recopilará los comentarios de si cada uno de estos clientes se suscribe al plan premium  y, gracias a su poderoso algoritmo, descubrirá rápidamente la estrategia con la tasa de conversión más alta. Esta será la estrategía que habrá que implementar en los millones de clientes, maximizando así los ingresos de la compañía.
 
 
 
