@@ -64,8 +64,6 @@ La solución de IA que determinará la mejor estrategia se llama muestreo de Tho
 
 Al implementar el muestreo de Thompson, también implementaremos el algoritmo de selección aleatoria, que simplemente seleccionará una estrategia aleatoria en cada ronda. Este será nuestro punto de referencia para evaluar el rendimiento de nuestro modelo de muestreo de Thompson. Por supuesto, el muestreo de Thompson y el algoritmo de selección aleatoria competirán en la misma simulación, es decir, utilizando la misma matriz de recompensas. Y al final, una vez realizada la simulación completa, evaluaremos el rendimiento de Thompson Sampling calculando el rendimiento relativo, definido por la siguiente fórmula:
 
-Rendimiento Rel =  (Recompensa Muestro Thompson) - (Recompensa Selección
-Al implementar el muestreo de Thompson, también implementaremos el algoritmo de selección aleatoria, que simplemente seleccionará una estrategia aleatoria en cada ronda. Este será nuestro punto de referencia para evaluar el rendimiento de nuestro modelo de muestreo de Thompson. Por supuesto, el muestreo de Thompson y el algoritmo de selección aleatoria competirán en la misma simulación, es decir, utilizando la misma matriz de recompensas. Y al final, una vez realizada la simulación completa, evaluaremos el rendimiento de Thompson Sampling calculando el rendimiento relativo, definido por la siguiente fórmula:
 
-Rendimiento Relativo = (Recompensa Muestro de Thomson) - (Recompensa Selección Aleatoria) / (Recompensa Selección Aleatoria * 100
+Rendimiento Rel. = (Recompensa M. de Thomson) - (Recompensa Selección Aleatoria) / (Recompensa Selección Aleatoria) * 100
 
