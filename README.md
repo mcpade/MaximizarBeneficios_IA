@@ -56,5 +56,9 @@ La matriz de recompensas solo está aquí para la simulación, y en la vida real
 
 El muestreo de Thompson recopilará los comentarios de si cada uno de estos clientes se suscribe al plan premium  y, gracias a su poderoso algoritmo, descubrirá rápidamente la estrategia con la tasa de conversión más alta. Esta será la estrategía que habrá que implementar en los millones de clientes, maximizando así los ingresos de la compañía.
 
+### Solución IA
+
+La solución de IA que determinará la mejor estrategia se llama muestreo de Thompson. Es, con diferencia, el mejor modelo para ese tipo de problemas en esta rama de Aprendizaje en línea de Inteligencia Artificial. En resumen, cada vez que un nuevo cliente se conecta al sitio web, esa es una nueva ronda n y seleccionamos una de nuestras 9 estrategias para intentar una conversión (suscripción al plan premium). El objetivo es seleccionar la mejor estrategia en cada ronda, y entrenar durante muchas rondas. 
+
 
 
