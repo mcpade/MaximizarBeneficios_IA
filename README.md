@@ -1,39 +1,39 @@
 # MaximizarBeneficios_IA
 
-## Caso Práctico: Ejemplo de uso del muestreo de Thompson para maximización de beneficios de un negocio de venta online
+## Practical case: Example of the use of Thompson sampling to maximize profits from an online sales business
 
-### Problema a resolver
+### Problem to solve
 
-Imaginemos un negocio minorista en línea que tiene millones de clientes. Estos clientes son solo personas que compran algunos
-productos en el sitio web de vez en cuando y se los entregan en casa (como Amazon). El negocio está funcionando bien, pero
-la junta directiva ha decidido tomar algún plan de acción para maximizar aún más los ingresos. Este plan consiste en ofrecer
-a los clientes la opción de suscribirse a un plan premium, que les dará algunos beneficios como precios reducidos, ofertas
-especiales, etc. Este plan premium se ofrece a un precio anual de 100 dólares y el objetivo de este negocio minorista en línea
-es, por supuesto, conseguir que el máximo de clientes se suscriba a este plan premium. Descubrir la mejor estrategia a
-implementar hará que el negocio maximice sus ingresos adicionales.
+Let's imagine an online retail business that has millions of customers. These customers are just people who buy some
+products on the website from time to time and delivered to you at home (like Amazon). The business is doing well, but
+the board of directors has decided to take some action plan to further maximize revenue. This plan consists of offering
+customers the option to subscribe to a premium plan, which will give them some benefits such as reduced prices, offers
+specials, etc. This premium plan is offered at an annual price of $ 100 and the goal of this online retail business
+It is, of course, to get the maximum number of customers to subscribe to this premium plan. Discover the best strategy to
+implementing will make the business maximize its additional income.
 
-En este caso práctico enfrentaremos 9 estrategias diferentes, y nuestra IA no tendrá idea de cuál es la mejor, y absolutamente
-ninguna información previa sobre ninguna de sus tasas de conversión. Estas estrategias fueron elaboradas de forma cuidadosa e
-inteligente por el equipo de marketing, y cada una de ellas tiene el mismo objetivo: convertir al mayor número de clientes al
-plan premium. Las 9 estrategias son todas diferentes: tienen diferentes formas, diferentes paquetes, diferentes
-anuncios y diferentes ofertas especiales para convencer y persuadir a los clientes a suscribirse al plan premium. Por supuesto,
-el equipo de marketing no tiene idea de cuál de estas 9 estrategias es la mejor. 
+In this practical case we will face 9 different strategies, and our AI will have no idea which one is the best, and absolutely
+no prior information on any of your conversion rates. These strategies were carefully developed and
+by the marketing team, and each of them has the same goal: to convert the largest number of customers to the
+premium plan. The 9 strategies are all different: they have different shapes, different packages, different
+advertisements and different special offers to convince and persuade customers to subscribe to the premium plan. Of course,
+the marketing team has no idea which of these 9 strategies is the best.
 
-En lugar enviar un correo electrónico a sus 100 millones de clientes que sería costoso y correrían el riesgo de acabar en spam,
-se buscará la mejor estrategia a través del aprendizaje en línea.
+Instead of sending an email to your 100 million customers that would be expensive and they would risk ending up in spam,
+the best strategy will be sought through online learning.
 
-¿Qué es el aprendizaje en línea? Consistirá en implementar una estrategia cada vez que un cliente navegue por el sitio web
-del negocio para pasar el rato o comprar algunos productos. Mientras el cliente navega por el sitio web, de repente recibirá
-un anuncio emergente, sugiriéndole que se suscriba al plan premium. Y para cada cliente que navega por el sitio web, solo se
-implementará una de las 9 estrategias. Luego, el usuario elegirá, o no, tomar medidas y suscribirse al plan premium. Si el
-cliente se suscribe, es un éxito, de lo contrario, es un fracaso. Cuantos más clientes hagan esto, más comentarios recibiremos
-y tendremos una mejor idea de cuál es la mejor estrategia. Por supuesto, no lo resolveremos manualmente, 
-visualmente o con algunas matemáticas simples. Implementaremos el algoritmo más inteligente que descubra cuál
-es la mejor estrategia en el menor tiempo posible. 
+What is online learning? It will consist of implementing a strategy each time a client browses the website
+of the business to hang out or buy some products. While the customer is browsing the website, they will suddenly receive
+a pop-up ad, suggesting you subscribe to the premium plan. And for each customer who browses the website, only
+will implement one of the 9 strategies. Then the user will choose, or not, to take action and subscribe to the premium plan. If he
+customer subscribes, it is a success, otherwise it is a failure. The more customers do this, the more feedback we get
+and we will have a better idea of what the best strategy is. Of course, we will not solve it manually,
+visually or with some simple math. We will implement the smartest algorithm that finds out which
+It is the best strategy in the shortest time possible.
 
-#### Simulación
+#### Simulation
 
-Para simular este Caso Práctico, asumiremos que estas estrategias tienen las siguientes tasas de conversión. En una situación de la vida real no tendríamos idea de cuáles serían estas tasas de conversión. Solo las conocemos aquí para fines de simulación, solo para que podamos verificar al final que nuestra IA logra descubrir la mejor estrategia, que según la tabla siguiente es la estrategia número 6 (la que tiene la tasa de conversión más alta).
+To simulate this Case Study, we will assume that these strategies have the following conversion rates. In a real life situation we would have no idea what these conversion rates would be. We only know about them here for simulation purposes, just so we can verify in the end that our AI manages to discover the best strategy, which according to the table below is strategy number 6 (the one with the highest conversion rate).
 
   
 Strategy | Conversion Rate
@@ -48,47 +48,47 @@ Strategy | Conversion Rate
 7        | 0.08
 8        | 0.01
 
-### Definición del entorno
+### Definition of the environment
 
-Tenemos que definir las recompensas para construir nuestra matriz de recompensas, donde cada fila corresponde a un usuario que está implementando una estrategia, y cada columna corresponde a una de las 9 estrategias. Por lo tanto, dado que realmente ejecutaremos este experimento de aprendizaje en línea en 10.000 clientes, esta matriz de recompensas tendrá 10.000 filas y 9 columnas. Luego, cada celda obtendrá un 0 si el cliente no se suscribe al plan premium después de ser abordado por la estrategia seleccionada, y un 1 si el cliente se suscribe después de ser abordado por la estrategia seleccionada. Y los valores en la celda son exactamente, las recompensas.
+We have to define the rewards to build our reward matrix, where each row corresponds to a user who is implementing a strategy, and each column corresponds to one of the 9 strategies. Therefore, since we will actually run this e-learning experiment on 10,000 customers, this reward matrix will have 10,000 rows and 9 columns. Then each cell will get a 0 if the customer does not subscribe to the premium plan after being approached by the selected strategy, and a 1 if the customer subscribes after being approached by the selected strategy. And the values ​​in the cell are exactly, the rewards.
 
-La matriz de recompensas solo está aquí para la simulación, y en la vida real no tendríamos una matriz de recompensas. Simplemente simularemos 10.000 clientes siendo abordados sucesivamente por una de las 9 estrategias, y gracias a la matriz de recompensas simularemos la decisión del cliente de suscribirse sí o no al plan premium. Si la celda correspondiente a un cliente específico y una estrategia seleccionada específica tiene un 1, eso simulará una conversión por parte del cliente al plan premium, y si la celda tiene un 0, simulará un rechazo. 
+The reward matrix is ​​only here for simulation, and in real life we ​​would not have a reward matrix. We will simply simulate 10,000 clients being approached successively by one of the 9 strategies, and thanks to the rewards matrix we will simulate the client's decision to subscribe yes or no to the premium plan. If the cell for a specific customer and a specific selected strategy has a 1, that will simulate a conversion by the customer to the premium plan, and if the cell has a 0, it will simulate a rejection.
 
-El muestreo de Thompson recopilará los comentarios de si cada uno de estos clientes se suscribe al plan premium  y, gracias a su poderoso algoritmo, descubrirá rápidamente la estrategia con la tasa de conversión más alta. Esta será la estrategía que habrá que implementar en los millones de clientes, maximizando así los ingresos de la compañía.
+Thompson Sampling will collect feedback on whether each of these customers subscribe to the premium plan and thanks to its powerful algorithm, it will quickly discover the strategy with the highest conversion rate. This will be the strategy that will have to be implemented in the millions of clients, thus maximizing the company's income.
 
-### Solución IA
+### AI solution
 
-La solución de IA que determinará la mejor estrategia se llama muestreo de Thompson. Es, con diferencia, el mejor modelo para ese tipo de problemas en esta rama de Aprendizaje en línea de Inteligencia Artificial. En resumen, cada vez que un nuevo cliente se conecta al sitio web, esa es una nueva ronda n y seleccionamos una de nuestras 9 estrategias para intentar una conversión (suscripción al plan premium). El objetivo es seleccionar la mejor estrategia en cada ronda, y entrenar durante muchas rondas. 
+The AI solution that will determine the best strategy is called Thompson sampling. It is by far the best model for such problems in this branch of Artificial Intelligence Online Learning. In short, every time a new customer connects to the website, that's a new round n and we select one of our 9 strategies to attempt a conversion (subscription to premium plan). The goal is to select the best strategy in each round, and train for many rounds. 
 
-### Implementación: "thomson_sampling.py"
+### Implementation: "thomson_sampling.py"
 
-Al implementar el muestreo de Thompson, también implementaremos el algoritmo de selección aleatoria, que simplemente seleccionará una estrategia aleatoria en cada ronda. Este será nuestro punto de referencia para evaluar el rendimiento de nuestro modelo de muestreo de Thompson. Por supuesto, el muestreo de Thompson y el algoritmo de selección aleatoria competirán en la misma simulación, es decir, utilizando la misma matriz de recompensas. Y al final, una vez realizada la simulación completa, evaluaremos el rendimiento de Thompson Sampling calculando el rendimiento relativo, definido por la siguiente fórmula:
+By implementing Thompson sampling, we will also implement the random selection algorithm, which will simply select a random strategy each round. This will be our benchmark for evaluating the performance of our Thompson sampling model. Of course, the Thompson sampling and the random selection algorithm will compete in the same simulation, that is, using the same reward matrix. And in the end, once the complete simulation is done, we will evaluate the Thompson Sampling performance by calculating the relative performance, defined by the following formula:
 
 
 Rendimiento Rel. = (Recompensa M. de Thomson) - (Recompensa Selección Aleatoria) / (Recompensa Selección Aleatoria) * 100
 
-Tras aplicar el algoritmo implementado en python, este sería el resultado en el que se puede ver que se consigue con el Muestreo de Thomson más que duplicar la selección aleatoria. 
+After applying the algorithm implemented in python, this would be the result in which it can be seen that Thomson Sampling is achieved rather than doubling the random selection.
 
 ![Resultado](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/Resultado.png)
 
-También representaremos el histograma de los anuncios seleccionados, solo para verificar que la estrategia con la tasa de conversión más alta (Estrategia 6) ha sido en efecto la más seleccionada. El muestreo de Thompson ha sido capaz de identificarlo rápidamente
+We will also render the histogram of the selected ads, just to verify that the strategy with the highest conversion rate (Strategy 6) was indeed the most selected. Thompson sampling has been able to quickly identify it
 
 ![Histograma](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/HistogramaEstrategias.png)
 
-### Curva de arrepentimiento
+### Regret curve
 
-La curva de arrepentimiento de un modelo (con estrategia aleatoria o con el muestreo de Sampling) es la representación gráfica de la diferencia entre la mejor estrategia y el modelo desplegado, con respecto a las rondas.
+The regret curve of a model (with random strategy or with Sampling sampling) is the graphical representation of the difference between the best strategy and the deployed model, with respect to the rounds.
 
-La mejor estrategia se calcula simplemente obteniendo, en cada ronda, el máximo de las recompensas acumuladas sobre todas las diferentes estrategias. 
+The best strategy is calculated simply by obtaining, in each round, the maximum of the accumulated rewards on all the different strategies.
 
-**Curva de arrepentimiento de la estrategia aleatoria:**
+**Random strategy regret curve:**
 
 ![ArrepentimientoAle](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/RegretRS.png)
 
-No observamos absolutamente ninguna convergencia de la estrategia aleatoria hacia la mejor estrategia.
+We observe absolutely no convergence of the random strategy towards the best strategy.
 
-**Curva de arrepentimiento del Muestreo de Thompson:**
+**Regret curve of the Thompson Sampling:**
 
 ![ArrepentimientoAle](https://raw.githubusercontent.com/mcpade/MaximizarBeneficios_IA/master/images/RegretTS.png)
 
-El muestreo de Thompson está convergiendo muy bien hacia la mejor estrategia.
+The Thompson sampling is converging very well towards the best strategy.
